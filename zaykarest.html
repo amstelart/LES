@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>ЛЕС</title>
+  <meta name="description" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+  </script>
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/site.webmanifest">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ffffff">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<meta name="msapplication-config" content="/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
+<body>
+  <div class="page__inner">
+    <div class="page__content">
+      <header class="header">
+          <div class="container">
+            <div class="header__body">
+              <a href="index.html" class="header__logo">
+                <img class="logo-white" src="img/logo-white.png" alt="ЛЕС">
+                <img class="logo-dark" src="img/logo.png" alt="ЛЕС">
+              </a>
+              <nav class="header__menu">
+                <ul class="header__list">
+                  <li>
+                    <a href="glamping.html" class="header__link">
+                      Глэмпинг и цены
+                    </a>
+                  </li>
+                  <li>
+                    <a href="zaykarest.html" class="header__link">
+                      ZAYKA ресторан
+                    </a>
+                  </li>
+                  <li>
+                    <a href="vpechatleniya.html" class="header__link">
+                      Впечатления
+                    </a>
+                  </li>
+                  <li>
+                    <a href="wellnessandspa.html" class="header__link">
+                      Wellness and Spa
+                    </a>
+                  </li>
+                  <li>
+                    <a href="contacts.html" class="header__link">
+                      Контакты
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="social">
+                <div class="social__item">
+                  <a href="#" target="_blank" class="social__link">
+                    <img src="img/IG.svg" alt>
+                  </a>
+                </div>
+                <div class="social__item">        
+                  <a href="#" target="_blank" class="social__link">
+                    <img src="img/FB.svg" alt>
+                  </a>
+                </div>
+              </div>
+              <a class="call-box" href="tel:+88002222375">
+                <div class="call-box__phone">+88002222375</div>
+                <div class="call-box__text">Позвоните нам</div>
+              </a>
+              <a href="#" class="btn btn--light-outline">Планируйте поездку</a>
+              <div class="header__burger">
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </header>
+      <div class="top-banner" style="background-image: url(img/zaykarest-top.jpg);">
+        <div class="container">
+          <div class="top-banner__inner">
+            <a href="#" class="btn btn--green">Забронировать столик</a>
+          </div>
+        </div>
+      </div>
+      <main class="main" role="main">
+        <div class="main__inner">
+          <div class="container">
+            <div class="main__head">
+              <h1 class="section-title-1">ZAYKA — ресторан авторской кухни <br>Профессионально утоляем аппетит!</h1>
+            </div>
+            <div class="cards-grid cards-grid--lg">
+              <div class="cards-grid__item">
+                <div class="card card--lg">
+                  <div class="card__carousel">
+                    <div class="swiper card-slider">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/1-cs-01.jpg" alt></div>
+                        <div class="swiper-slide"><img src="img/1-cs-02.jpg" alt></div>
+                        <div class="swiper-slide"><img src="img/1-cs-03.jpg" alt></div>
+                        <div class="swiper-slide"><img src="img/1-cs-04.jpg" alt></div>
+                        <div class="swiper-slide"><img src="img/1-cs-05.jpg" alt></div>
+                        <div class="swiper-slide"><img src="img/1-cs-06.jpg" alt></div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+                  <div class="card__title">Лесная кухня</div>
+                  <div class="card__caption">
+                    <p>Шеф-повар создал неповторимое меню из блюд, приготовленных из местных продуктов. В умелых руках наших поваров дичь, домашние овощи, сезонные фрукты, сочная зелень, трюфели, кавказские сыры, специи превращаются в кулинарные шедевры!</p>
+                  </div>
+                </div>
+              </div>
+              <div class="cards-grid__item">
+                <div class="card card--lg">
+                  <div class="card__carousel">
+                    <div class="swiper card-slider">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/2-cs-01.jpg" alt></div>
+                        <div class="swiper-slide"><img src="img/2-cs-02.jpg" alt></div>
+                        <div class="swiper-slide"><img src="img/2-cs-03.jpg" alt></div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+                  <div class="card__title">Кулинарное шоу</div>
+                  <div class="card__caption">
+                    <p>Между вами и кухней нет границ. Повара готовят потрясающие блюда у вас на виду. Наслаждайтесь кулинарным шоу, ощущайте все ароматы, общайтесь с шеф-поваром!</p>
+                  </div>
+                </div>
+              </div>
+              <div class="cards-grid__item">
+                <div class="card card--lg">
+                  <div class="card__carousel">
+                    <div class="swiper card-slider">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/3-cs-01.jpg" alt></div>
+                        <div class="swiper-slide"><img src="img/3-cs-02.jpg" alt></div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+                  <div class="card__title">Детское меню и анимация</div>
+                  <div class="card__caption">
+                    <p>В выходные в ресторане царит семейная идиллия: для детей оформлена комфортная зона играми, а профессиональный аниматор устраивает для маленьких гостей ресторана мастер-классы. В это время родители имеют возможность спокойно и неторопливо насладиться едой и общением с друзьями.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="cards-grid__item">
+                <div class="card card--lg">
+                  <div class="card__carousel">
+                    <div class="swiper card-slider">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/4-cs-01.jpg" alt></div>
+                        <div class="swiper-slide"><img src="img/4-cs-02.jpg" alt></div>
+                        <div class="swiper-slide"><img src="img/4-cs-03.jpg" alt></div>
+                        <div class="swiper-slide"><img src="img/4-cs-04.jpg" alt></div>
+                        <div class="swiper-slide"><img src="img/4-cs-05.jpg" alt></div>
+                        <div class="swiper-slide"><img src="img/4-cs-06.jpg" alt></div>
+                        <div class="swiper-slide"><img src="img/4-cs-07.jpg" alt></div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+                  <div class="card__title">Завораживающая атмосфера</div>
+                  <div class="card__caption">
+                    <p>ZAYKA расположен в уникальном месте вблизи Сочинского заповедника. Территория 2 га, реликтового леса, где царит тишина и умиротворение. Вековые деревья увитые плющом и мхом, ручные кролики и живой огонь, встречают каждого гостя. Философия ресторана основана на здравом смысле: блюда сосредоточены на определенном моменте в определенное время года</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section class="gallery">
+            <div class="gallery__inner">
+              <div class="gallery__col">
+                <a href="img/1-gallery-01.jpg" class="gallery__item"><img src="img/1-gallery-01.jpg" alt></a>
+              </div>
+              <div class="gallery__col">
+                <a href="img/1-gallery-02.jpg" class="gallery__item"><img src="img/1-gallery-02.jpg" alt></a>
+              </div>
+              <div class="gallery__col">
+                <a href="img/1-gallery-03.jpg" class="gallery__item"><img src="img/1-gallery-03.jpg" alt></a>
+              </div>
+              <div class="gallery__col">
+                <a href="img/1-gallery-04.jpg" class="gallery__item"><img src="img/1-gallery-04.jpg" alt></a>
+              </div>
+              <div class="gallery__col">
+                <a href="img/1-gallery-05.jpg" class="gallery__item"><img src="img/1-gallery-05.jpg" alt></a>
+              </div>
+              <div class="gallery__col">
+                <a href="img/1-gallery-06.jpg" class="gallery__item"><img src="img/1-gallery-06.jpg" alt></a>
+              </div>
+              <div class="gallery__col">
+                <a href="img/1-gallery-07.jpg" class="gallery__item"><img src="img/1-gallery-07.jpg" alt></a>
+              </div>
+              <div class="gallery__col">
+                <a href="img/1-gallery-08.jpg" class="gallery__item"><img src="img/1-gallery-08.jpg" alt></a>
+              </div>
+            </div>
+          </section>
+          <!-- <section>
+            <div class="container">
+              <div class="h1">Звоните и записывайтесь по тел 8928 451 96 21</div>
+              <ul>
+                <li>Без проживания стоимость банного комплекса 3500 руб., с человека за 3 часа :</li>
+                <li>входят в стоимость: 4 бани, зона отдыха, халат, тапочки и полотенца, бассейн с 5 июня</li>
+                <li>дети с 3-х лет 1500 за три часа</li>
+                <li>с 12 лет тариф взрослый</li>
+                <li>Посещение с детьми до 12 лет до 18:00</li>
+              </ul>
+            </div>
+          </section> -->
+          <!-- <div class="call-back">
+            <div class="container">
+              <div class="call-back__form">
+                <form action="">
+                  <label class="field-text call-back-field">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="Ваш номер телефона" id="" name="">
+                    </span>
+                  </label>
+                  <div class="field-actions call-back-field">
+                    <button class="btn btn--green">Перезвоните мне</button>
+                  </div>
+                </form>
+                <p>Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности</p>
+              </div>
+            </div>
+          </div> -->
+          <!-- <section>
+            <div class="container">
+              <div class="cards-grid cards-grid--lg">
+                <div class="cards-grid__item">
+                  <div class="embed-responsive  embed-responsive--16-9">
+                    <iframe src="https://www.youtube.com/embed/HNpLuXOg7xQ" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="cards-grid__item">
+                  <div class="embed-responsive  embed-responsive--16-9">
+                    <iframe src="https://www.youtube.com/embed/HNpLuXOg7xQ" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section> -->
+          <!-- <section class="spa-box">
+            <div class="container">
+              <div class="spa-box__title">СПА - комплекс</div>
+              <div class="spa-box__img">
+                <img src="img/spa-box-image.jpeg" alt="">
+              </div>
+              <div class="spa-box__caption">
+                <div class="c_col">
+                  <p>Расслабьтесь и ощутите гармонию тела и души в СПА на лоне природы. Только ваше тело, ваши мысли и профессиональные руки нашего мастера. Все процедуры сопровождает шум леса и пение птиц. Кристально свежий воздух приобретает аромат масел. Древние и современные техники избавляют тело от зажимов, усталости и накопленного стресса.</p>
+                </div>
+                <div class="c_col">
+                  <p>Все процедуры подбираются под ваши индивидуальные особенности и полностью соответствуют вашим пожеланиям.</p>
+                </div>
+              </div>
+            </div>
+          </section> -->
+          <!-- <section>
+            <div class="container">
+              <div class="cards-grid cards-grid--lg">
+                <div class="cards-grid__item">
+                  <div class="card card--lg">
+                    <div class="card__img"><img src="img/spa-card-01.jpg" alt=""></div>
+                    <div class="card__title">МАССАЖИ:</div>
+                    <ul class="card__list">
+                      <li>
+                        <span class="t-service">Расслабляющий массаж</span>
+                        <span class="t-time">60/90 мин</span>
+                      </li>
+                      <li>
+                        <span class="t-service">Массаж поющими чашами</span>
+                        <span class="t-time">60/90 мин</span>
+                      </li>
+                      <li>
+                        <span class="t-service">Традиционный Тайский массаж</span>
+                        <span class="t-time">90 мин</span>
+                      </li>
+                      <li>
+                        <span class="t-service">Массаж ног</span>
+                        <span class="t-time">40 мин</span>
+                      </li>
+                      <li>
+                        <span class="t-service">Детский общий массаж</span>
+                        <span class="t-time">30/60 мин</span>
+                      </li>
+                      <li>
+                        <span class="t-service">Массаж головы</span>
+                        <span class="t-time">30 мин</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="cards-grid__item">
+                  <div class="card card--lg">
+                    <div class="card__img"><img src="img/spa-card-02.jpg" alt=""></div>
+                    <div class="card__title">СПА СКРАБИРОВАНИЕ И ОБЕРТЫВАНИЕ:</div>
+                    <ul class="card__list">
+                      <li>
+                        <span class="t-service">Скраб по телу Рис и Франжипани</span>
+                        <span class="t-time">30 мин</span>
+                      </li>
+                      <li>
+                        <span class="t-service">Скраб по телу Манго</span>
+                        <span class="t-time">30 мин</span>
+                      </li>
+                      <li>
+                        <span class="t-service">Программа "Японская традиция"</span>
+                        <span class="t-time">1 час 15 мин</span>
+                      </li>
+                      <li>
+                        <span class="t-service">Медитация для начинающих</span>
+                        <span class="t-time">90 мин</span>
+                      </li>
+                      <li>
+                        <span class="t-service">Уходовая программа "Новая Я"</span>
+                        <span class="t-time">60 мин</span>
+                      </li>
+                    </ul>
+                    <p>Индивидуальные программы парения по записи</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section> -->
+          <section class="order">
+            <div class="container">
+              <div class="order__header">
+                <h2 class="order__title">Бронирование SPA-программ</h2>
+                <p class="order__sub-title">Вы можете забронировать столик для компании от 2х до 10 человек. Наш менеджер свяжется с вами и обсудит все детали. Либо по тел: 8 928 451 96 23</p>
+              </div>
+              <div class="order__form">
+                <form action>
+                  <label class="field-text order-field">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="Ваше имя" id name>
+                    </span>
+                  </label>
+                  <label class="field-text order-field">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="+7(999) 999-99-99" id name>
+                    </span>
+                  </label>
+                  <label class="field-text order-field">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="Дата бронирования" id name>
+                    </span>
+                  </label>
+                  <label class="field-text order-field">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="Время бронирования" id name>
+                    </span>
+                  </label>
+                  <div class="field-actions order-field">
+                    <button class="btn btn--green">Забронировать SPA</button>
+                  </div>
+                </form>
+              </div>
+              <div class="order__info">
+                <p>Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c <a href="#">политикой конфиденциальности</a>. Мы не передаем информацию третьим лицам.</p>
+              </div>
+            </div>
+          </section>
+          <section class="section">
+            <div class="container">
+              <div class="big-video-box">
+                <div class="embed-responsive  embed-responsive--16-9">
+                  <iframe src="https://www.youtube.com/embed/HNpLuXOg7xQ" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="attracts__row">
+                <div class="attracts__col">
+                  <div class="attracts-card">
+                    <div class="attracts-card__title">Живописное место</div>
+                    <div class="attracts-card__text">
+                      <p>Расположен в долине двух рек — Медовеевки и минеральной реки Чвижепсе. Вдали от туристических маршрутов, скрытый от посторонних глаз наш. ЛЕС похож на тропический затерянный мир.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="attracts__col">
+                  <div class="attracts-card">
+                    <div class="attracts-card__title">Ресторан и СПА в одном месте</div>
+                    <div class="attracts-card__text">
+                      <p>24 уникальных тент-хаусов, подарят вам невероятный комфорт: удобная мебель из натуральных материалом, удобства, кондиционер. Широкая терраса для романтических вечеров и уединённых завтраков.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="attracts__col">
+                  <div class="attracts-card">
+                    <div class="attracts-card__title">Климатические особенности</div>
+                    <div class="attracts-card__text">
+                      <p>Мы находимся в горах (500 м над уровнем моря). Чистейший воздух и отсутствие изнуряющей жары Сочи доставят удовольствие от пребывания в глемпинге.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section">
+            <div class="container">
+              <p class="section-title-1 text-center">Наш телефон 8928 541 96 23</p>
+            </div>
+          </section>
+          <section class="gallery gallery--insta">
+            <div class="gallery__inner">
+              <div class="gallery__col">
+                <a href="img/2-gallery-01.jpg" class="gallery__item"><img src="img/2-gallery-01.jpg" alt></a>
+              </div>
+              <div class="gallery__col">
+                <a href="img/2-gallery-02.jpg" class="gallery__item"><img src="img/2-gallery-02.jpg" alt></a>
+              </div>
+              <div class="gallery__col">
+                <a href="img/2-gallery-03.jpg" class="gallery__item"><img src="img/2-gallery-03.jpg" alt></a>
+              </div>
+              <div class="gallery__col">
+                <a href="img/2-gallery-04.jpg" class="gallery__item"><img src="img/2-gallery-04.jpg" alt></a>
+              </div>
+              <div class="gallery__col">
+                <a href="img/2-gallery-05.jpg" class="gallery__item"><img src="img/2-gallery-05.jpg" alt></a>
+              </div>
+              <div class="gallery__col">
+                <a href="img/2-gallery-06.jpg" class="gallery__item"><img src="img/2-gallery-06.jpg" alt></a>
+              </div>
+              <div class="gallery__col">
+                <a href="img/2-gallery-07.jpg" class="gallery__item"><img src="img/2-gallery-07.jpg" alt></a>
+              </div>
+              <div class="gallery__col">
+                <a href="img/2-gallery-08.jpg" class="gallery__item"><img src="img/2-gallery-08.jpg" alt></a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <div class="page__footer-wrapper">
+      <footer class="page-footer" role="contentinfo">
+        <div class="page-footer__inner">
+          <div class="page-footer__row">
+            <div class="footer-col page-footer__menu">
+              <div class="footer-col__title">Меню</div>
+              <ul class="footer-col__list">
+                <li><a href="#">Глэмпинг и цены</a></li>
+                <li><a href="#">ZAYKA ресторан</a></li>
+                <li><a href="#">Wellness and Spa</a></li>
+                <li><a href="#">Впечатления</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="footer-col page-footer__social">
+              <div class="footer-col__title">Мы в соц сетях</div>
+              <ul class="footer-col__list">
+                <li><a href="#">Инстаграм</a></li>
+                <li><a href="#">Фейсбук</a></li>
+                <li><a href="#">Telegram</a></li>
+                <li><a href="#">WhatsApp</a></li>
+              </ul>
+            </div>
+            <div class="footer-col page-footer__contacts">
+              <div class="footer-col__title">Контакты</div>
+              <ul class="footer-col__list">
+                <li><a href="#">+79384433232</a></li>
+                <li><a href="#">88002222375</a></li>
+                <li>Адрес глэмпинга в Сочи: село Чвижепсе, городской округ Сочи, улица Нарзанная 13</li>
+                <li>почта: gl@spsib.ru</li>
+                <li>orp@spsib.ru отдел бронирования по работе с агенствами и юр.лицами</li>
+              </ul>
+            </div>
+            <div class="footer-col page-footer__logo">
+              <img src="img/logo.png" alt>
+            </div>
+          </div>
+          <div class="page-footer__bottom">
+            <p>Cookie уведомления</p>
+            <p>Договор оферта</p>
+            <p>Наши реквизиты</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>
