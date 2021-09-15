@@ -176,8 +176,11 @@
 
   &.active {
     &:before,
-    .header__logo {
-      z-index: 0;
+    .social,
+    .header__logo,
+    .call-box,
+    .btn {
+      z-index: -1;
     }
   }
 }

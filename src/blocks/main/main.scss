@@ -2,6 +2,11 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
+:root {
+  --swiper-theme-color: #fff;
+  --swiper-navigation-size: 25px;
+}
+
 .section {
   padding: 60px 0;
 }
@@ -146,6 +151,18 @@
   &__item {
     margin: 10px 0;
   }
+}
+
+.scroll-text {
+  position: absolute;
+  bottom: 0;
+  left: 0 ;
+  width: 100%;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.55;
+  font-weight: 400;
+  padding: 25px 0;
 }
 
 .top-banner {
@@ -337,6 +354,7 @@
   $block-name:                &; // #{$block-name}__element
 
   padding: 80px 0;
+  position: relative;
 
   &__head {
     margin-top: 80px;
@@ -359,8 +377,8 @@
     }
   }
 
-  &__inner {
-    // @include container;
+  .container {
+    position: relative;
   }
 }
 
@@ -453,6 +471,7 @@
 .info-box-group {
   border-bottom: 1px solid #d9a35a;
   padding-bottom: 80px;
+  position: relative;
 }
 
 .info-box {
@@ -478,6 +497,7 @@
 
 .price-box {
   padding-top: 80px;
+  position: relative;
   
   &__inner {
     @include row;
@@ -577,6 +597,7 @@
 
 .insta {
   margin-bottom: 45px;
+  position: relative;
 
   &__inner {
     display: flex;
@@ -1163,5 +1184,86 @@
   .spa-box__img {
     padding-bottom: 40px;
     margin-bottom: 0;
+  }
+}
+
+.call-box {
+  text-decoration: none;
+
+  &__phone {
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    line-height: 1;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 500;
+    color: #143716;
+  }
+}
+
+.social {
+  display: flex;
+
+  &__item {
+    width: 35px;
+    height: 35px;
+    margin: 0 7px;
+  }
+
+  &__link {
+    display: block;
+  }
+}
+
+.decor-box-01 {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+}
+
+.decor-box-02 {
+  position: absolute;
+  top: 0;
+  right: -20px;
+}
+.decor-box-03 {
+  position: absolute;
+  bottom: 0;
+  left: -30px;
+}
+
+.decor-box-04 {
+  position: absolute;
+  top: -90px;
+  right: -60px;
+}
+
+.decor-box-05 {
+  position: absolute;
+  top: -90px;
+  right: -60px;
+}
+
+.insta {
+  .decor-box-03 {
+    position: absolute;
+    bottom: -40px;
+    left: initial;
+    right: -60px;
+    transform: rotate(270deg);
+  }
+}
+
+@media (max-width:($screen-md - 1)) {
+  .decor-box-01,
+  .decor-box-02,
+  .decor-box-03,
+  .decor-box-04,
+  .decor-box-05 {
+    display: none;
   }
 }
