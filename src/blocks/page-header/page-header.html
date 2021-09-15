@@ -1,0 +1,60 @@
+<!--DEV
+
+Нужно убрать пробел между @-ами:
+
+@ @include('blocks/page-header/page-header.html')
+
+-->
+
+<header class="page-header" role="banner">
+  <div class="page-header__inner">
+    <img src="img/logo.png" width="100px" alt="">
+    <nav id="main-nav" class="main-nav" role="navigation">
+      <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+      <ul class="main-nav__list">
+        <li class="main-nav__item main-nav__item--active">
+          <a href="glamping.html" class="main-nav__link">
+            Глэмпинг и цены
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="zaykarest.html" class="main-nav__link">
+            ZAYKA ресторан
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="vpechatleniya.html" class="main-nav__link">
+            Впечатления
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="wellnessandspa.html" class="main-nav__link">
+            Wellness and Spa
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="contacts.html" class="main-nav__link">
+            Контакты
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="social">
+      <div class="social__item">
+        <a href="#" target="_blank" class="social__link">
+          <img src="img/IG.svg" alt="">
+        </a>
+      </div>
+      <div class="social__item">        
+        <a href="#" target="_blank" class="social__link">
+          <img src="img/FB.svg" alt="">
+        </a>
+      </div>
+    </div>
+    <a class="call-box" href="tel:+88002222375">
+      <div class="call-box__phone">+88002222375</div>
+      <div class="call-box__text">Позвоните нам</div>
+    </a>
+    <a href="#" class="btn btn--light">Планируйте поездку</a>
+  </div>
+</header>
